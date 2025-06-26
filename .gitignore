@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.pyc
+*.cache
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+*.env
+*.venv
+
+# Environment / dotenv
+.env
+.env.*
