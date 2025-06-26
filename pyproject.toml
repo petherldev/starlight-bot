@@ -1,0 +1,33 @@
+[tool.poetry]
+name        = "starlight-bot"
+version     = "1.0.0"
+description = "A modern Discord slash-command bot built with Py-Cord, Rich, and Python 3.12."
+authors     = ["Petherl <petherl@protonmail.com>"]
+license     = "Apache-2.0"
+readme      = "README.md"
+repository  = "https://github.com/petherldev/starlight-bot.git"
+keywords    = ["discord", "bot", "py-cord", "slash", "rich", "python"]
+
+[tool.poetry.dependencies]
+python        = "^3.12"
+py-cord       = "^2.5"          # Discord API wrapper with slash-command support
+python-dotenv = "^1.0"          # Loads secrets from .env
+rich          = "^14.0"         # Colourful logging + pretty tracebacks
+
+[tool.poetry.group.dev.dependencies]
+ruff          = "^0.4"          # Fast linter / formatter
+mypy          = "^1.10"         # Static type-checker
+pytest        = "^8.2"          # (Optional) unit-testing framework
+
+[build-system]
+requires      = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]              # Optional Ruff config (keeps code style consistent)
+select = ["E", "F", "I", "B"]
+line-length = 100
+
+[tool.mypy]              # Optional Mypy config
+python_version = "3.12"
+strict = true
+plugins = []
